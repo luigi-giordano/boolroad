@@ -5,7 +5,7 @@ const trips = [
     itinerary: "City tour, visit to the Louvre, Seine river cruise",
     startDate: "2025-06-10",
     endDate: "2025-06-17",
-    guides: ["Niccolò Balini"],
+    guides: "Niccolò Balini",
     price: 1200,
     participants: [
       {
@@ -36,7 +36,7 @@ const trips = [
     itinerary: "Statue of Liberty, Times Square, Central Park",
     startDate: "2025-09-05",
     endDate: "2025-09-15",
-    guides: ["Stefano Corradi"],
+    guides: "Stefano Corradi",
     price: 2500,
     participants: [
       {

@@ -1,0 +1,12 @@
+.logo {
+  height: 100px;
+  /* Dimensione predefinita */
+  max-width: 100%;
+}
+
+@media (max-width: 510px) {
+  .logo {
+    height: 50px;
+    /* Logo più piccolo su dispositivi mobili */
+  }
+}
