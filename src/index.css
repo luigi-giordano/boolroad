@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  background-color: #051B29;
+  padding-bottom: 5px;
+}
+
 .logo {
   height: 100px;
   /* Dimensione predefinita */
@@ -9,4 +21,8 @@
     height: 50px;
     /* Logo più piccolo su dispositivi mobili */
   }
+}
+
+main {
+  height: 100vh;
 }

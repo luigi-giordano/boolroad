@@ -10,7 +10,7 @@ function DefaultLayout() {
 
       </header>
 
-      <main>
+      <main className="bg-primary-subtle">
 
         <Outlet />
 
