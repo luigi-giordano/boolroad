@@ -11,9 +11,6 @@ function TravelPage() {
   const [searchData, setSearchData] = useState('')
   const [partecipantsList, setPartecipantsList] = useState(partecipants)
 
-  const handleSearch = (e) => {
-    setSearchData(e.target.value)
-  }
 
   console.log(searchData);
 
@@ -21,15 +18,26 @@ function TravelPage() {
 
   const fetchData = () => {
     const filteredPartecipants = partecipants.filter((partecipant) => {
-      `${partecipant.firstName} ${partecipant.lastName}`.toLowerCase().includes(searchData.toLowerCase())
+      return `${partecipant.firstName} ${partecipant.lastName}`.toLowerCase().includes(searchData.toLowerCase())
     })
 
     setPartecipantsList(filteredPartecipants)
-    console.log(filteredPartecipants);
-
   }
 
+  const handleSearch = (e) => {
+    setSearchData(e.target.value)
+    fetchData()
+  }
 
+  const resetSearchData = () => {
+    fetchData()
+    setPartecipantsList(partecipants)
+    setSearchData('')
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
 
   return (
 
@@ -42,7 +50,7 @@ function TravelPage() {
           <h1 className="text-primary py-3">Elenco partecipanti al viaggio : {travel.destination}</h1>
           <div className="d-flex" role="search"  >
             <input className="form-control me-2" type="search" placeholder="Cerca un partecipante" aria-label="Search" value={searchData} onChange={handleSearch} />
-            <button className="btn btn-outline-success" onClick={fetchData}>Cerca</button>
+            <button className="btn btn-outline-danger" onClick={resetSearchData}><i class="bi bi-x-lg"></i></button>
           </div>
         </div>
       </nav>
