@@ -61,7 +61,7 @@ function TravelPage() {
 
       ))}
 
-      <Link to="/" className="btn btn-primary m-5">Torna all'elenco dei viaggi</Link>
+      <Link to="/" className="btn btn-primary m-5">Torna all'elenco dei viaggiiiiiiiiii</Link>
     </div>
   )
 }
