@@ -8,23 +8,29 @@ function HomePage() {
   const [tripList, setTripList] = useState(trips)
 
   return (
-    <div className="container-fluid ">
-      <nav className="navbar bg-body-tertiary py-4">
-        <div className="container-fluid">
-          <h1 className="text-primary py-3">Elenco dei viaggi:</h1>
+    <div className="container">
+      <nav className="trasparente navbar justify-content-center justify-content-md-between p-3">
+        <div>
+          <h1 className=" py-3">Prossime partenze</h1>
+        </div>
+        <div>
           <SearchBar data={trips} setData={setTripList} search="destination" />
         </div>
       </nav>
-      <ul>
+      <div>
         {tripList.map(trip => (
-          <li className="d-flex justify-content-between my-3 p-3 align-items-center text-bg-light border rounded" key={trip.id}>
-            <span className="fw-bold"><i className="bi bi-geo-alt-fill"></i> {trip.destination}</span>
-            <span><i className="bi bi-calendar-date"></i> From{trip.startDate} To {trip.endDate}</span>
-            <span><i><i className="bi bi-person-fill"></i> {trip.guides}</i></span>
-            <Link to={`/travel-page/${trip.id}`} className="btn btn-primary">Visualizza Partecipanti</Link>
-          </li>
+          <div className="trasparente row justify-content-between my-3 p-3 align-items-center border rounded" key={trip.id}>
+            <div className="col-6">
+              <p className="fw-bold"><i className="bi bi-geo-alt-fill"></i> {trip.destination}</p>
+              <p><i className="bi bi-calendar-date"></i> From{trip.startDate} To {trip.endDate}</p>
+              <p><i><i className="bi bi-person-fill"></i> {trip.guides}</i></p>
+            </div>
+            <div className="col-6 text-end">
+              <Link to={`/travel-page/${trip.id}`} className="btn">Visualizza Partecipanti</Link>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
