@@ -1,13 +1,6 @@
 import { Link } from "react-router-dom"
+import scrollToTop from "../functions/ScrollToTop";
 function Header() {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Scroll morbido
-    });
-  };
-
-
   return (
     <header>
       <div className="logo">

@@ -3,6 +3,7 @@ import { useState } from "react"
 import trips from "../data/TravelData"
 import Accordion from "../components/Accordion"
 import SearchBar from "../components/SearchBar"
+import scrollToTop from "../functions/ScrollToTop"
 
 function TravelPage() {
 
@@ -10,10 +11,7 @@ function TravelPage() {
   const travel = trips.find(trip => trip.id === id)
   const partecipants = travel.participants
   const [partecipantsList, setPartecipantsList] = useState(partecipants)
-
   return (
-
-
 
     <div className="container">
 
@@ -33,7 +31,7 @@ function TravelPage() {
             <Accordion key={partecipant.id} data={partecipant} />
           ))}
         </div>
-        <Link to="/" className="btn btn-custom m-5">Torna all'elenco dei viaggi</Link>
+        <Link to="/" className="btn btn-custom m-5" onClick={scrollToTop}>Torna all'elenco dei viaggi</Link>
       </div>
     </div >
   )

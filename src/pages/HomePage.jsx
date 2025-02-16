@@ -1,8 +1,8 @@
 import trips from "../data/TravelData"
 import { Link } from "react-router-dom"
 import SearchBar from "../components/SearchBar"
+import scrollToTop from "../functions/ScrollToTop"
 import { useState } from "react"
-
 function HomePage() {
 
   const [tripList, setTripList] = useState(trips)
@@ -31,7 +31,7 @@ function HomePage() {
               <p><i><i className="bi bi-person-fill"></i> {trip.guides}</i></p>
             </div>
             <div className="col-6 text-end">
-              <Link to={`/travel-page/${trip.id}`} className="btn btn-custom">Visualizza Partecipanti</Link>
+              <Link to={`/travel-page/${trip.id}`} className="btn btn-custom" onClick={scrollToTop}>Visualizza Partecipanti</Link>
             </div>
           </div>
         ))}
