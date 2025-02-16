@@ -29,10 +29,10 @@ const SearchBar = ({ data, setData, search }) => {
   }, [searchData])
 
   return (
-    <div className="searchBar">
-      <div className="d-flex" role="search"  >
-        <input className="form-control custom-input me-2" type="search" placeholder="Cerca" aria-label="Search" value={searchData} onChange={handleSearch} />
-        {searchData.length > 0 && <button className="btn btn-outline-danger" onClick={resetSearchData}><i className="bi bi-x-lg"></i></button>}
+    <div className="searchBar py-3">
+      <div className="d-flex justify-content-center justify-content-lg-end" role="search"  >
+        <input className="form-control custom-input" type="search" placeholder="Cerca" aria-label="Search" value={searchData} onChange={handleSearch} />
+        {searchData.length > 0 && <button className="btn btn-outline-danger ms-2" onClick={resetSearchData}><i className="bi bi-x-lg"></i></button>}
       </div>
     </div>
   )

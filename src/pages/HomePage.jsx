@@ -9,24 +9,29 @@ function HomePage() {
 
   return (
     <div className="container">
-      <nav className="trasparente navbar justify-content-center justify-content-md-between p-3">
-        <div>
-          <h1 className=" py-3">Prossime partenze</h1>
+
+      {/* navbar */}
+      <nav className="navbar custom-navbar align-items-center justify-content-center justify-content-md-between p-4">
+        <div className="section-title mb-md-0 text-center">
+          <h1 >Prossime partenze</h1>
         </div>
-        <div>
+        <div className="">
           <SearchBar data={trips} setData={setTripList} search="destination" />
         </div>
       </nav>
-      <div>
+
+
+      <div className="main-content">
         {tripList.map(trip => (
-          <div className="trasparente row justify-content-between my-3 p-3 align-items-center border rounded" key={trip.id}>
+          <div className="custom-card d-flex justify-content-between align-items-center my-3 p-4" key={trip.id}>
             <div className="col-6">
               <p className="fw-bold"><i className="bi bi-geo-alt-fill"></i> {trip.destination}</p>
-              <p><i className="bi bi-calendar-date"></i> From{trip.startDate} To {trip.endDate}</p>
+              <p><i className="bi bi-airplane-fill"></i> {trip.startDate} </p>
+              <p><i className="bi bi-house-fill"></i> {trip.endDate}</p>
               <p><i><i className="bi bi-person-fill"></i> {trip.guides}</i></p>
             </div>
             <div className="col-6 text-end">
-              <Link to={`/travel-page/${trip.id}`} className="btn">Visualizza Partecipanti</Link>
+              <Link to={`/travel-page/${trip.id}`} className="btn btn-custom">Visualizza Partecipanti</Link>
             </div>
           </div>
         ))}

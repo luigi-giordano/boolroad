@@ -1,15 +1,20 @@
-
+import { Link } from "react-router-dom"
 function Header() {
-  return (
-    <>
-      <header>
-        <div className="container-fluid">
-          <a className="navbar-brand">
-            <img className="logo" src="../../public/img/logo.png" alt="logo" /></a>
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Scroll morbido
+    });
+  };
 
-        </div>
-      </header>
-    </>
+
+  return (
+    <header>
+      <div className="logo">
+        <Link to="#"><img src="/img/logo.png" alt="logo" onClick={scrollToTop} /></Link>
+      </div>
+    </header>
+
   )
 }
 

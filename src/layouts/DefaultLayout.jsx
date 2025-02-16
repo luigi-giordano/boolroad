@@ -5,15 +5,11 @@ function DefaultLayout() {
   return (
     <>
       <header>
-
         <Header />
-
       </header>
 
-      <main className="bg-primary-subtle">
-
+      <main className="py-5">
         <Outlet />
-
       </main>
     </>
   )

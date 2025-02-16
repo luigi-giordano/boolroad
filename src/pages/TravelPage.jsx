@@ -15,23 +15,27 @@ function TravelPage() {
 
 
 
-    <div className="container-fluid">
-      {/* <h1 className="text-primary py-3">Elenco partecipanti al viaggio : {travel.destination}</h1> */}
-      <nav className="navbar bg-body-tertiary py-4">
-        <div className="container-fluid">
-          <h1 className="text-primary py-3">Elenco partecipanti al viaggio : {travel.destination}</h1>
+    <div className="container">
+
+      <nav className="navbar custom-navbar justify-content-center justify-content-lg-between p-4">
+        <div>
+          <h1 className="section-title text-center">Partecipanti al viaggio : {travel.destination}</h1>
+        </div>
+        <div>
           <SearchBar data={partecipants} setData={setPartecipantsList} search="firstName" />
         </div>
+
       </nav>
 
-      {partecipantsList.map(partecipant => (
-
-        <Accordion key={partecipant.id} data={partecipant} />
-
-      ))}
-
-      <Link to="/" className="btn btn-primary m-5">Torna all'elenco dei viaggi</Link>
-    </div>
+      <div className="main-content">
+        <div className="custom-accordion">
+          {partecipantsList.map(partecipant => (
+            <Accordion key={partecipant.id} data={partecipant} />
+          ))}
+        </div>
+        <Link to="/" className="btn btn-custom m-5">Torna all'elenco dei viaggi</Link>
+      </div>
+    </div >
   )
 }
 

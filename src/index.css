@@ -5,58 +5,118 @@
 
 }
 
-main {
-  font-family: "Poiret One", serif;
-  font-weight: bolder;
-  font-style: normal;
-}
-
 
 header {
-  background-color: #051B29;
-  padding-bottom: 5px;
-}
-
-h1 {
-  font-family: "Antonio", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-
-  color: #3D8653;
-}
-
-.btn {
+  height: 100px;
   background-color: #051b29;
-  color: white;
+  position: fixed;
+  width: 100%;
+  /* Aggiungi questa riga per rendere l'header largo tutta la pagina */
+  z-index: 1;
+  /* Mantieni il z-index per il layering */
+  top: 0;
+  /* Posiziona l'header in cima */
 }
 
 .logo {
-  height: 100px;
-  /* Dimensione predefinita */
-  max-width: 100%;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  /* Aggiungi questa riga per assicurarti che il logo si centri correttamente */
+  padding: 7px 0;
 }
 
-@media (max-width: 510px) {
-  .logo {
-    height: 50px;
-    /* Logo più piccolo su dispositivi mobili */
-  }
-
+.logo img {
+  border-radius: 100px;
+  max-height: 100%;
 }
+
 
 main {
-  background-image: url("../public/img/boolroad_background.webp");
+  margin-top: 100px;
+  background-image: url("/img/boolroad_background.webp");
   background-size: cover;
-  height: 100vh;
-}
+  background-repeat: no-repeat;
+  min-height: 100vh;
 
-.custom-input {
-  background-color: rgba(255, 255, 255, 0.5);
-}
+  /* Evita lo zoom che si crea per la diversa dimensione delle due pagine e centra l'immagine */
+  background-position: center top 100px;
 
-.trasparente {
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(1px);
-  border-radius: 10px;
+  /* Mantiene lo sfondo fisso durante lo scroll */
+  background-attachment: fixed;
+
+  .custom-navbar {
+    background: rgba(255, 255, 255, 0.300);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+
+    .section-title {
+      font-family: "Antonio", serif;
+      font-optical-sizing: auto;
+      font-weight: bolder;
+      font-style: normal;
+      color: #3D8653;
+    }
+
+    .custom-input {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 70%;
+    }
+  }
+
+  .main-content {
+    font-family: "Poiret One", serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 1.3rem;
+
+    .custom-card {
+      background: rgba(255, 255, 255, 0.300);
+      backdrop-filter: blur(7px);
+      border-radius: 10px;
+
+    }
+
+    .custom-accordion {
+      .accordion-item {
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.300);
+        backdrop-filter: blur(7px);
+
+        .accordion-header {
+          .accordion-button {
+            font-size: 1.5rem;
+            font-weight: bolder;
+          }
+        }
+
+        .accordion-body {
+          padding-top: 20px;
+          margin: 0;
+
+          .info {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .btn-custom {
+      background-color: #051b29;
+      color: white;
+
+      &:hover {
+        background-color: #051b29;
+        color: white;
+        transform: scale(1.1)
+      }
+    }
+  }
+
+
+
+
+
+
+
 }
