@@ -1,22 +1,26 @@
 import { useState, useEffect } from "react"
 
-const SearchBar = ({ data, setData, search }) => {
+const SearchBar = ({ data, setData, searchKey1, searchKey2 }) => {
 
   const [searchData, setSearchData] = useState('')
 
   const handleSearch = (e) => {
     setSearchData(e.target.value)
-    console.log(searchData);
 
   }
 
   const fetchData = () => {
-    const filteredData = data.filter((item) => {
-      return item[search].toLowerCase().includes(searchData.toLowerCase())
+    const filteredData = data.filter(item => {
+      return (
+        (item[searchKey1] && item[searchKey1].toLowerCase().includes(searchData.toLowerCase())) ||
+        (item[searchKey2] && item[searchKey2].toLowerCase().includes(searchData.toLowerCase()))
+      )
     })
 
     setData(filteredData)
   }
+
+
 
   const resetSearchData = () => {
     fetchData()

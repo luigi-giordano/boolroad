@@ -22,7 +22,7 @@ function TravelPage() {
           <h1 className="section-title text-center">Partecipanti al viaggio : {travel.destination}</h1>
         </div>
         <div>
-          <SearchBar data={partecipants} setData={setPartecipantsList} search="firstName" />
+          <SearchBar data={partecipants} setData={setPartecipantsList} searchKey1="firstName" searchKey2="lastName" />
         </div>
 
       </nav>

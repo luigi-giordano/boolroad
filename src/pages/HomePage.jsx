@@ -16,14 +16,14 @@ function HomePage() {
           <h1 >Prossime partenze</h1>
         </div>
         <div className="">
-          <SearchBar data={trips} setData={setTripList} search="destination" />
+          <SearchBar data={trips} setData={setTripList} searchKey1="destination" />
         </div>
       </nav>
 
 
       <div className="main-content">
         {tripList.map(trip => (
-          <div className="custom-card d-flex justify-content-between align-items-center my-3 p-4" key={trip.id}>
+          <div className="custom-card d-flex justify-content-between align-items-center my-3 py-3 p-4" key={trip.id}>
             <div className="col-6">
               <p className="fw-bold"><i className="bi bi-geo-alt-fill"></i> {trip.destination}</p>
               <p><i className="bi bi-airplane-fill"></i> {trip.startDate} </p>
