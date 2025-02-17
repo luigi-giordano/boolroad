@@ -11,18 +11,16 @@ header {
   background-color: #051b29;
   position: fixed;
   width: 100%;
-  /* Aggiungi questa riga per rendere l'header largo tutta la pagina */
   z-index: 1;
-  /* Mantieni il z-index per il layering */
   top: 0;
-  /* Posiziona l'header in cima */
+
 }
 
 .logo {
   text-align: center;
   height: 100%;
   width: 100%;
-  /* Aggiungi questa riga per assicurarti che il logo si centri correttamente */
+
   padding: 7px 0;
 }
 
@@ -38,11 +36,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-
-  /* Evita lo zoom che si crea per la diversa dimensione delle due pagine e centra l'immagine */
   background-position: center top 100px;
-
-  /* Mantiene lo sfondo fisso durante lo scroll */
   background-attachment: fixed;
 
   .custom-navbar {
