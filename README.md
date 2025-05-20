@@ -15,3 +15,4 @@ Mettiamo su un nuovo progetto React aiutandoci con Vite
 - al click del partecipante si apre la scheda con le informazioni dettagliate
 
 - creazione pulsante per tornare alla HomePage![Screenshot 2025-05-20 163515](https://github.com/user-attachments/assets/67171650-3cef-4cd2-bdda-ce2216e97d62)
+![Screenshot 2025-05-20 163540](https://github.com/user-attachments/assets/65707fa1-e99d-441d-8233-1e41fe1f274e)
